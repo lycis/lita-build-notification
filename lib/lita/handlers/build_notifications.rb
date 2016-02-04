@@ -20,8 +20,7 @@ module Lita
           receivers.each do |receiver|
             target = receiverToTarget(receiver)
             unless target == nil
-                if target.is_a? Lita::User
-                  robot.send_message(target, message)
+                robot.send_message(target, message)
             end  
           end
       end
