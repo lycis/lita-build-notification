@@ -20,7 +20,8 @@ module Lita
           receivers.each do |receiver|
             target = receiverToTarget(receiver)
             unless target == nil
-                robot.send_message(target, message)
+                if target.is_a? Lita::User
+                  robot.send_message(target, message)
             end  
           end
       end
@@ -112,9 +113,10 @@ module Lita
           id   = receiver.split(':')[1]
 
           if type == "user"
-              return Lita::User.find_by_id(id)
+              user = Lita::User.find_by_id(id)
+              return Source.new(user: user, private_message: true)
           else
-              return Lita::Room.find_by_id(id)
+              return Source.new(room: id)
           end
       end
 

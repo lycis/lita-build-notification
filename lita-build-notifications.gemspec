@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-build-notifications"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Daniel Eder"]
   spec.email         = ["daniel@deder.at"]
   spec.description   = "Allows to post build status information from HTTP to chat channels."
