@@ -1,12 +1,12 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-build-notifications"
   spec.version       = "0.1.0"
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.description   = "TODO: Add a description"
-  spec.summary       = "TODO: Add a summary"
-  spec.homepage      = "TODO: Add a homepage"
-  spec.license       = "TODO: Add a license"
+  spec.authors       = ["Daniel Eder"]
+  spec.email         = ["daniel@deder.at"]
+  spec.description   = "Allows to post build status information from HTTP to chat channels."
+  spec.summary       = "This plugin provides a HTTP endpoint to post build status information and publishes it to subscribers in the chat."
+  spec.homepage      = "https://github.com/lycis/lita-build-notification"
+  spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
   spec.files         = `git ls-files`.split($/)

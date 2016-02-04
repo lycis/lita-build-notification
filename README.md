@@ -1,6 +1,7 @@
 # lita-build-notifications
 
-TODO: Add a description of the plugin.
+This extension allows you to register for status changes of build events. It furthermore adds a HTTP POST endpoint
+to Lita to inform about any build status changes.
 
 ## Installation
 
@@ -11,9 +12,21 @@ gem "lita-build-notifications"
 ```
 
 ## Configuration
-
-TODO: Describe any configuration attributes the plugin exposes.
+not required
 
 ## Usage
+### Commands
+```
+build notify <me|room-id> - notify you or the given room on build events
+build list receivers      - list all ids of who will be notified
+build clear receivers     - remove all receivers of build events
+```
 
-TODO: Describe the plugin's features and how to use them.
+### HTTP Endpoints
+Post a JSON in the following form to `http://yourlita/build/notify`:
+```
+{
+  "id":"build name or id", 
+  "status": "build satatus (e.g. success)"
+}
+```
